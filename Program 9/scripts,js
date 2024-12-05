@@ -1,0 +1,24 @@
+$(document).ready(function() {
+    // Append text to the existing paragraph
+    $('#appendText').click(function() {
+        $('#myParagraph').append(' This text has been appended.');
+    });
+
+    // Append item to the existing list
+    $('#appendListItem').click(function() {
+        $('#myList').append('<li>New Item</li>');
+    });
+
+    // Animate the div and change its color
+    $('#animateDiv').click(function() {
+        $('#animatedDiv')
+            .animate({
+                width: 'toggle',
+                height: 'toggle',
+                opacity: 'toggle'
+            }, 1000, function() {
+                // Change the color after animation
+                $(this).css('background-color', '#28a745'); // Change to green
+            });
+    });
+});

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content and Animations</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            width: auto;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin-top: 20px;
+            position: relative;
+        }
+        .animation-buttons button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Content and Advanced Animations</h1>
+
+    <!-- Append Content -->
+    <div class="content">
+        <h2>Dynamic Content Appending</h2>
+        <p id="paragraph">This is an existing paragraph.</p>
+        <input type="text" id="userInput" placeholder="Enter content to append">
+        <button id="appendContent">Append Content</button>
+
+        <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+
+    <!-- Animate Element -->
+    <div class="content">
+        <h2>Advanced Animations</h2>
+        <div class="box"></div>
+        <div class="animation-buttons">
+            <button id="animateBox">Expand and Fade</button>
+            <button id="moveBox">Move Right</button>
+            <button id="resetBox">Reset Position</button>
+            <button id="rotateBox">Rotate</button>
+            <button id="colorBox">Change Color</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Append user-provided content to Paragraph and List
+            $("#appendContent").click(function () {
+                const userContent = $("#userInput").val(); // Get user input
+                if (userContent.trim() !== "") { // Check if input is not empty
+                    $("#paragraph").append(" " + userContent); // Append to paragraph
+                    $("#list").append("<li>" + userContent + "</li>"); // Append to list
+                } else {
+                    alert("Please enter some content to append.");
+                }
+            });
+
+            // Expand and Fade Box
+            $("#animateBox").click(function () {
+                $(".box").animate({
+                    width: "200px",
+                    height: "200px",
+                    opacity: 0.5
+                }, 1000, function () {
+                    $(this).css("background-color", "orange");
+                });
+            });
+
+            // Move Box to the Right
+            $("#moveBox").click(function () {
+                $(".box").animate({
+                    left: "200px"
+                }, 1000);
+            });
+
+            // Reset Box Position
+            $("#resetBox").click(function () {
+                $(".box").animate({
+                    left: "0",
+                    width: "100px",
+                    height: "100px",
+                    opacity: 1
+                }, 500).css("background-color", "lightblue");
+            });
+
+            // Rotate Box (Simulated)
+            $("#rotateBox").click(function () {
+                $(".box").css({
+                    transform: "rotate(360deg)",
+                    transition: "transform 1s"
+                });
+            });
+
+            // Change Background Color
+            $("#colorBox").click(function () {
+                $(".box").animate({
+                    backgroundColor: "green"
+                }, 1000).css("background-color", "green");
+            });
+        });
+    </script>
+</body>
+</html>
