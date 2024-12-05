@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+    <title>Class Time Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: red;
+        }
+        .break {
+            background-color: #ffeb99; /* Yellow for Tea and Lunch Break */
+        }
+        .lab {
+            background-color: #ccffcc; /* Light Green for Lab sessions */
+        }
+        .day {
+            font-weight: bold;
+            background-color: #d9f7f7;
+        }
+        tfoot {
+            text-align: center;
+            font-size: 14px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Class Time Table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="10">Class Time Table</th>
+            </tr>
+            <tr>
+                <th>Day</th>
+                <th>9:15AM - 10:10AM</th>
+                <th>10:10AM - 11:05AM</th>
+                <th>11:05AM - 11:20AM</th>
+                <th>11:20AM - 12:15PM</th>
+                <th>12:15PM - 1:10PM</th>
+                <th>1:10PM - 2:00PM</th>
+                <th>2:00PM - 2:55PM</th>
+                <th>2:55PM - 3:50PM</th>
+                <th>3:55PM - 4:45PM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="day">Monday</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td rowspan="2" class="break">Tea Break</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td rowspan="6" class="break">Lunch Break</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+            </tr>
+            <tr>
+                <td class="day">Tuesday</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+                <td>DS</td>
+                <td colspan="3" class="lab">WEB Lab</td>
+            </tr>
+            <tr>
+                <td class="day">Wednesday</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+                <td>DS</td>
+                <td>AI</td>
+            </tr>
+            <tr>
+                <td class="day">Thursday</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+            </tr>
+            <tr>
+                <td class="day">Friday</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+                <td>DS</td>
+                <td>AI</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+            </tr>
+            <tr>
+                <td class="day">Saturday</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+                <td>DS</td>
+                <td>WEB</td>
+                <td>AI</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="10">Time table will be effective from 16<sup>th</sup> August</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
