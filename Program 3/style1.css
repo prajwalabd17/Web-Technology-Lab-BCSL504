@@ -1,0 +1,92 @@
+/* Element Selectors */
+
+h2 {
+    color: #00698f; /* Sets the text color of h2 elements to a deep blue */
+    font-size: 24px; /* Sets the font size of h2 elements to 24 pixels */
+    margin-bottom: 10px; /* Adds a margin of 10 pixels below h2 elements */
+  }
+  
+  h3 {
+    color: #008000; /* Sets the text color of h3 elements to green */
+    font-size: 18px; /* Sets the font size of h3 elements to 18 pixels */
+    text-decoration: underline; /* Underlines the text of h3 elements */
+  }
+  
+  hr {
+    border: none; /* Removes the default border of hr elements */
+    height: 2px; /* Sets the height of hr elements to 2 pixels */
+    background-color: #ccc; /* Sets the background color of hr elements to light gray */
+    margin: 20px 0; /* Adds a margin of 20 pixels above and below hr elements */
+  }
+  
+  p {
+    font-family: Arial, sans-serif; /* Sets the font family of p elements to Arial */
+    font-size: 16px; /* Sets the font size of p elements to 16 pixels */
+    line-height: 1.5; /* Sets the line height of p elements to 1.5 times the font size */
+  }
+  
+  div {
+    background-color: #f0f0f0; /* Sets the background color of div elements to light gray */
+    padding: 20px; /* Adds a padding of 20 pixels to div elements */
+    border: 1px solid #ddd; /* Adds a border of 1 pixel to div elements */
+  }
+  
+  span {
+    color: #ff0000; /* Sets the text color of span elements to red */
+    font-weight: bold; /* Sets the font weight of span elements to bold */
+  }
+  
+  time {
+    font-style: italic; /* Sets the font style of time elements to italic */
+    color: #666; /* Sets the text color of time elements to dark gray */
+  }
+  
+  img {
+    width: 300px; /* Sets the width of img elements to 100% of their parent element */
+    height: 300px; /* Sets the height of img elements to auto */
+    margin: 20px 0; /* Adds a margin of 20 pixels above and below img elements */
+    padding-left: 20px;
+  }
+  
+  a {
+    text-decoration: none; /* Removes the default text decoration of a elements */
+    color: #337ab7; /* Sets the text color of a elements to a deep blue */
+  }
+  
+  a:hover {
+    color: #23527c; /* Sets the text color of a elements on hover to a darker blue */
+  }
+  
+  /* Class Selectors */
+  
+  .featured {
+    background-color: #ffff00; /* Sets the background color of elements with the class "featured" to yellow */
+    padding: 10px; /* Adds a padding of 10 pixels to elements with the class "featured" */
+  }
+  
+  /* ID Selectors */
+  
+  #header {
+    background-color: #333; /* Sets the background color of the element with the ID "header" to dark gray */
+    color: #fff; /* Sets the text color of the element with the ID "header" to white */
+    padding: 20px; /* Adds a padding of 20 pixels to the element with the ID "header" */
+  }
+  
+  /* Attribute Selectors */
+  
+  a[target="_blank"] {
+    color: #ff0000; /* Sets the text color of a elements with the target attribute set to "_blank" to red */
+  }
+  
+  /* Pseudo-Class Selectors */
+  
+  a:visited {
+    color: #666; /* Sets the text color of visited a elements to dark gray */
+  }
+  
+  /* Pseudo-Element Selectors */
+  
+  p::first-letter {
+    font-size: 24px; /* Sets the font size of the first letter of p elements to 24 pixels */
+    color: #00698f; /* Sets the text color of the first letter of p elements to a deep blue */
+  }
