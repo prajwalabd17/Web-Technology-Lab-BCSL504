@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Newspaper Layout</title>
+    <style>
+        /* General body style */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header style */
+        header {
+            background-color: #2E86C1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        /* Section and article styles */
+        section {
+            display: flex;
+            margin: 20px;
+        }
+
+        article {
+            flex: 2;
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        article h2 {
+            font-size: 28px;
+            color: #34495E;
+        }
+
+        article p {
+            font-size: 18px;
+            color: #7F8C8D;
+            line-height: 1.6;
+        }
+
+        /* Aside (Sidebar) styles */
+        aside {
+            flex: 1;
+            background-color: #F4F6F7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        aside h3 {
+            font-size: 24px;
+            color: #2E86C1;
+        }
+
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            padding: 10px 0;
+            font-size: 16px;
+            color: #5D6D7E;
+        }
+
+        /* Figure and caption styles */
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        figure figcaption {
+            font-size: 16px;
+            color: #7F8C8D;
+            margin-top: 10px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #BDC3C7;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            color: #34495E;
+        }
+
+        th {
+            background-color: #D5DBDB;
+            font-size: 18px;
+        }
+
+        td {
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #2E86C1;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+            }
+
+            article {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Daily News</h1>
+        <p>Your trusted source of news</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <section>
+        <!-- Main Article -->
+        <article>
+            <h2>Breaking News: Global Tech Advances</h2>
+            <p>The global tech scene is evolving at an unprecedented rate. Innovations in artificial intelligence, blockchain, and quantum computing are shaping the future of industries around the world. These advancements are expected to bring about significant changes in both the corporate and consumer sectors.</p>
+
+            <figure>
+                <img src="tech-innovation.jpg" alt="Tech Innovations">
+                <figcaption>Innovations in technology are transforming industries globally.</figcaption>
+            </figure>
+
+            <p>Experts suggest that the rise of machine learning and deep learning technologies will automate tasks that were once thought to be exclusively within the realm of human intelligence. Companies are rapidly adopting these technologies to stay competitive in a fast-paced global economy.</p>
+
+            <table>
+                <tr>
+                    <th>Technology</th>
+                    <th>Sector</th>
+                    <th>Impact</th>
+                </tr>
+                <tr>
+                    <td>Artificial Intelligence</td>
+                    <td>Healthcare</td>
+                    <td>Improved diagnostics and personalized treatment</td>
+                </tr>
+                <tr>
+                    <td>Blockchain</td>
+                    <td>Finance</td>
+                    <td>Decentralized transactions and secure data</td>
+                </tr>
+                <tr>
+                    <td>Quantum Computing</td>
+                    <td>Cryptography</td>
+                    <td>Revolutionizing data encryption methods</td>
+                </tr>
+            </table>
+        </article>
+
+        <!-- Sidebar (Aside) -->
+        <aside>
+            <h3>Related News</h3>
+            <ul>
+                <li><a href="#">The future of AI in transportation</a></li>
+                <li><a href="#">Blockchain's role in cybersecurity</a></li>
+                <li><a href="#">Quantum computing explained</a></li>
+                <li><a href="#">The impact of 5G technology</a></li>
+            </ul>
+        </aside>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Daily News. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

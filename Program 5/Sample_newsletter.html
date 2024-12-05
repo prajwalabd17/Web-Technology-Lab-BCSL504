@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page with Sidebars and Header</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: aqua;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #333;
+        }
+
+        /* Main Content Wrapper */
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Left Sidebar */
+        .left-sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        /* Right Sidebar */
+        .right-sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        /* Main Body */
+        .main-body {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Centered Header</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tech.html">Technology</a>
+        <a href="sports.html">Sports</a>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="left-sidebar">
+            <h2>Left Sidebar</h2>
+            <p>Content for left sidebar goes here.</p>
+        </div>
+
+        <div class="main-body">
+            <h2>Main Body</h2>
+            <p>This is the main content area.</p>
+        </div>
+
+        <div class="right-sidebar">
+            <h2>Right Sidebar</h2>
+            <p>Content for right sidebar goes here.</p>
+        </div>
+    </div>
+</body>
+</html>
