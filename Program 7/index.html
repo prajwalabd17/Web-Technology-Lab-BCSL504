@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        textarea, input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+        }
+        button {
+            width: 150px; /* Smaller width for buttons */
+            margin: 10px 0; /* Consistent spacing */
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            font-size: 18px;
+            color: #444;
+            border-left: 4px solid #007bff;
+            padding-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON Operations</h1>
+    <div class="container">
+
+        <div class="section">
+            <h2>a) Convert JSON text to JavaScript Object</h2>
+            <textarea id="jsonText" placeholder="Enter JSON text here"></textarea>
+            <button onclick="convertToObject()">Convert to Object</button>
+            <div id="jsonObjectOutput" class="output"></div>
+        </div>
+
+        <div class="section">
+            <h2>b) Convert JSON results into a Date</h2>
+            <textarea id="dateJson" placeholder='Enter JSON like {"date": "2024-11-21"}'></textarea>
+            <button onclick="convertToDate()">Convert to Date</button>
+            <div id="dateOutput" class="output"></div>
+        </div>
+
+        <div class="section">
+            <h2>c) Convert JSON to CSV and CSV to JSON</h2>
+            <textarea id="jsonToCsv" placeholder='Enter JSON like [{"name":"John", "age":30}, {"name":"Doe", "age":25}]'></textarea>
+            <button onclick="jsonToCsv()">Convert JSON to CSV</button>
+            <div id="csvOutput" class="output"></div>
+            <textarea id="csvToJson" placeholder="Enter CSV here"></textarea>
+            <button onclick="csvToJson()">Convert CSV to JSON</button>
+            <div id="jsonOutput" class="output"></div>
+        </div>
+
+        <div class="section">
+            <h2>d) Create Hash from String</h2>
+            <input type="text" id="hashInput" placeholder="Enter string to hash">
+            <button onclick="createHash()">Generate Hash</button>
+            <div id="hashOutput" class="output"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
